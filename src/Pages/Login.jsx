@@ -21,7 +21,6 @@ const Login = () => {
     }
 
     const checkPassword = (password) => {
-        // Check if the password has at least 8 characters
         if (password.length < 8) {
             alert('Password must have at least 8 characters.');
             return false;
@@ -34,11 +33,11 @@ const Login = () => {
 
 
     function multifunctioncall(e) {
-        e.preventDefault(); 
+        e.preventDefault();
     
         const isValid =
             ValidateEmail(formData.email) &&
-            checkPassword(formData.password) 
+            checkPassword(formData.password)
             
         if (isValid) {
             console.log('All validations passed. Proceeding with logic...');
@@ -48,7 +47,6 @@ const Login = () => {
         }
     }
     const handleChange = (e) => {
-        // Update the state when the input values change
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -59,7 +57,7 @@ const Login = () => {
         console.log(formData);
         try {
             const response = await axios.post(`${API_URL}/login`, formData);
-            console.log(response);
+            // console.log(response);
             if (response.data === "Invalid User name or Password") {
                 alert("Invalid User name or Password");
             }else if(response.data ==="Server Busy"){

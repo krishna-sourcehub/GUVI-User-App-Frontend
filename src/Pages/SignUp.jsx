@@ -36,13 +36,13 @@ const SignUp = () => {
         const isValidInput = /^[a-zA-Z ]+$/.test(name);
 
         if (isValidInput) {
-            // Proceed with your logic for a valid input
+      
             console.log('Input Name is a valid Name');
             return true;
         } else {
-            // Handle the case for an invalid input
+         
             alert('Enter a Name using only Alphabets ');
-            // You can show an error message or take other actions
+       
         }
     }
 
@@ -56,25 +56,25 @@ const SignUp = () => {
     }
 
     const checkPassword = (password) => {
-        // Check if the password has at least 8 characters
+       
         if (password.length < 8) {
             alert('Password must have at least 8 characters.');
             return false;
         }
 
-        // Check if the password contains at least one number
+      
         if (!/\d/.test(password)) {
             alert('Password must contain at least one number.');
             return false;
         }
 
-        // Check if the password contains at least one uppercase letter
+   
         if (!/[A-Z]/.test(password)) {
             alert('Password must contain at least one uppercase letter.');
             return false;
         }
 
-        // Check if the password contains at least one special character
+
         if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
             alert('Password must contain at least one special character.');
             return false;
@@ -111,7 +111,7 @@ const SignUp = () => {
 
 
     const handleSubmit = async (e) => {
-        console.log(formData);
+        // console.log(formData);
         try {
             const response = await axios.post(`${API_URL}/signin/verify`, formData);
             if (response.data && response.data.message !== undefined) {

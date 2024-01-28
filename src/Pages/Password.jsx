@@ -34,25 +34,23 @@ const Password = () => {
   }
 
   const checkPassword = (password) => {
-    // Check if the password has at least 8 characters
+
     if (password.length < 8) {
       alert('Password must have at least 8 characters.');
       return false;
     }
 
-    // Check if the password contains at least one number
+
     if (!/\d/.test(password)) {
       alert('Password must contain at least one number.');
       return false;
     }
 
-    // Check if the password contains at least one uppercase letter
     if (!/[A-Z]/.test(password)) {
       alert('Password must contain at least one uppercase letter.');
       return false;
     }
 
-    // Check if the password contains at least one special character
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
       alert('Password must contain at least one special character.');
       return false;
@@ -63,7 +61,7 @@ const Password = () => {
   };
 
   function matchPassword() {
-    console.log(formData.newPassword)
+    // console.log(formData.newPassword)
     if (formData.newPassword === formData.repeatPassword) {
 
       return true;
@@ -96,7 +94,7 @@ const Password = () => {
   }
 
   const sendOTP = async (e) => {
-    console.log(formData);
+    // console.log(formData);
     try {
       const response = await axios.post(`${API_URL}/reset/Password`, formData);
       if (response.data && response.data.message !== undefined) {
@@ -136,7 +134,7 @@ const Password = () => {
   }
 
   const changePassword = async (e) => {
-    console.log(formData);
+    // console.log(formData);
     try {
       console.log(formData.enteredOtp);
       const response = await axios.post(`${API_URL}/reset/verify`, formData);
@@ -157,7 +155,6 @@ const Password = () => {
       }
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        // Handle specific error with status code 400 (Bad Request)
         console.log("Invalid OTP or user not found");
         alert("Invalid OTP or user not found");
       } else {

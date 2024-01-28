@@ -318,7 +318,7 @@ const Profile = () => {
           navigate("/");
         } else if (messageValue === "User found") {
           console.log("Fetch Details Successfully");
-          console.log(response.data);
+          // console.log(response.data);
           setData(response.data.user);
 
           const appear = response.data.user.state;
