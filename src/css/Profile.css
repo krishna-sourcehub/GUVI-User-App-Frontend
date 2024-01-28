@@ -1,0 +1,85 @@
+.container{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius:5px ;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-append {
+    cursor: pointer;
+  }
+
+  .row{
+    margin-top: 80px;
+  }
+
+ 
+  .form-control{
+    width: 345px;
+  }
+
+  
+ 
+  /* .btn-danger{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  /* .btn-danger{
+    width: 100%;
+    border:none;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+} */
+.logout{
+  align-items: center;
+  border:none;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 25px;
+  float: right;
+}
+
+.layout{
+  max-width: 1000px;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 300px;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius:5px ;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.layout .edit{
+  align-items: center;
+  border:none;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 25px;
+
+}
+
+.layout .update{
+  align-items: center;
+  border:none;
+  color: #fff;
+  background-color: gray;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 25px;
+  width: 100px;
+  float: left;
+}
+
+.layout .space{
+  margin-top: 40px;
+}
