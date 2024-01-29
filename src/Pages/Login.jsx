@@ -54,7 +54,7 @@ const Login = () => {
     };
 
     const handleSubmit = async (e) => {
-        console.log(formData);
+        // console.log(formData);
         try {
             const response = await axios.post(`${API_URL}/login`, formData);
             // console.log(response);
