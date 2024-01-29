@@ -1,2 +1,2 @@
-const API_URL="https://auth-back-e4c0.onrender.com"
+const API_URL="https://auth-back-uilb.onrender.com"
 export default API_URL;
