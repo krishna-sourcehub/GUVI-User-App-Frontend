@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <Routes>
+      <Routes basename="/guvi-user-app-frontend">
         <Route index path='/' element={<Login />} />
         <Route path='/SignUp' element={<SignUp />} />
         <Route path='/Profile' element={<Profile />} />
